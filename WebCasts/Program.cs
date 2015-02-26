@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace WebCasts
 {
     class Book
@@ -11,41 +12,71 @@ namespace WebCasts
         private int _id;
         private string _bookName;
         private int _noOfPages = 250;
+        private string _author;
         
-        public void SetId(int Id)
+      
+
+        public string Author
         {
-            if (Id < 0)
-                throw new Exception("The book ID is not valid");
-            this._id = Id;
+            get;
+            set;
         }
-        public int GetId(int Id)
+
+        public int Id
         {
-            return this._id;
+            set
+            {
+                if (value < 0)
+                    throw new Exception("The book ID is not valid");
+                this._id = value;
+            }
+            get
+            {
+                return this._id;
+            }
         }
-        public void SetBookName(string Bookname)
+
+        public string BookName
         {
-            if (string.IsNullOrEmpty(Bookname))
-                throw new Exception("The book name is not valid");
-            this._bookName = Bookname;
-        }
-        public int GetBookName(String Bookname)
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("The book name is not valid");
+                this._bookName = value;
+            }
+            get
+            {
+                return this._bookName;
+            }
+
+
+        }    
+        public int NoOfPages
         {
-            return this._id;
+            get
+            {
+                return this._noOfPages;
+            }
         }
+        
     }
 
     class ExampleOne
     {
         public static void Main()
         {
-            Book B = new Book();
-            B.SetId(10);
-            B.SetBookName(null);
-            
-            Console.WriteLine("Book ID is {0}", B.SetId());
-            Console.WriteLine("Book name is {0}", B.SetBookName());
+            Book B1 = new Book();
+            B1.Id=10;
+            B1.BookName="HelloWorld";
+            B1.Author = "John Metzbower";
 
            
+            Console.WriteLine("Book ID is {0}", B1.Id);
+            Console.WriteLine("Book name is {0}", B1.BookName);
+            Console.WriteLine("Book has {0} pages", B1.NoOfPages);
+            Console.WriteLine("The Author of the book is {0}", B1.Author);
+
+
 
             Console.ReadKey();
         }
