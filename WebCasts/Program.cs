@@ -6,10 +6,29 @@ using System.Threading.Tasks;
 
 namespace WebCasts
 {
+    interface IMeter
+    {
+       void print();
+    }
+
+    class Meter : IMeter
+    {
+        public void print()
+        {
+            Console.WriteLine("What I want to print");
+        }
+    }
+
     class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
+            Meter met = new Meter();
+            met.print();
+
+
+
+            Console.ReadKey();
         }
     }
 }
