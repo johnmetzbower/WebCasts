@@ -21,7 +21,12 @@ namespace MyFirstProject.MyFirstDataTypes
         }
         public string SayHello(string name)
         {
-            return "Hello " + name;
+            return "Hello there, " + name;
+        }
+
+        public string SayHello(Person person)
+        {
+            return SayHello(person.FirstName + " " + person.LastName);
         }
     }
 }
