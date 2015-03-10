@@ -12,8 +12,11 @@ namespace MyFirstProject
 
         static void Main(string[] args)
         {
-            Person person = new Person("John ", "Metzbower");
-            Console.WriteLine(person.SayHello("John Metzbower"));
+            Person person = new Person("John", "David", "Metzbower");
+
+           
+
+            Console.WriteLine(person.FirstName + " " + person.MiddleName + " " + person.LastName);
 
         }
     }
