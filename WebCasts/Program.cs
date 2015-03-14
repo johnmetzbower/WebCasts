@@ -25,10 +25,16 @@ namespace MyFirstProject
 
             Person person = new Person("John", "Metzbower");
 
-            person.SayHello("John");
-            person.SayHello("John");
+            string hello = "Hello, World";
+            Console.WriteLine(hello);
 
-
+            foreach(char c in hello)
+            {
+                Console.WriteLine(c);
+            }
+            Console.WriteLine(string.Empty);
+            Console.WriteLine(hello)
+;
         }
     }
 }
