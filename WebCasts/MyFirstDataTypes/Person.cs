@@ -47,5 +47,30 @@ namespace MyFirstProject.MyFirstDataTypes
             }
             return SayHello(person.FirstName + " " + person.LastName);
         }
+
+        /*public string SayHello(params string[] names)
+        {
+            StringBuilder builder = new StringBuilder();
+            string temp = string.Empty;
+
+            foreach (string name in names)
+            {
+                // name, name, name, 
+                builder.Append(name + ", ");
+            }
+
+            temp = builder.ToString();
+            temp = temp.Remove(temp.LastIndexOf(","));
+
+            return SayHello(temp);
+
+        }*/
+
+        public string SayHello(params string[] names)
+        {
+
+            return SayHello(string.Join(", ", names));
+
+        }
     }
 }

@@ -22,19 +22,45 @@ namespace MyFirstProject
 
             //Console.WriteLine(greeting);
             #endregion
+            /*char[] foo = new char[5];
 
-            Person person = new Person("John", "Metzbower");
+            foo[0] = 'H';
+            foo[1] = 'E';
+            foo[2] = 'L';
+            foo[3] = 'L';
+            foo[4] = 'O';
 
-            string hello = "Hello, World";
-            Console.WriteLine(hello);
+            char[] foo = new char[]
+            {
+                'H', //0
+                'E', //1
+                'L', //2
+                'L', //3
+                'O'  //4
 
-            foreach(char c in hello)
+
+            };
+
+            foreach (char c in foo)
             {
                 Console.WriteLine(c);
             }
-            Console.WriteLine(string.Empty);
-            Console.WriteLine(hello)
-;
+            Console.WriteLine(string.Empty);*/
+
+            string[] names = new string[]
+            {
+                "James",
+                "John",
+                "Jennifer",
+                "Jackie"
+            };
+
+            Person john = new Person("John", "Metzbower");
+
+            Console.WriteLine(john.SayHello(names));
+            Console.WriteLine(john.SayHello("James", "John", "Jennifer", "Jackie", "Jeremy", "Josh"));
+
+
         }
     }
 }
