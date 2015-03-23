@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using MyFirstProject.MyFirstDataTypes;
 
 namespace MyFirstProject
@@ -47,7 +48,7 @@ namespace MyFirstProject
             }
             Console.WriteLine(string.Empty);*/
 
-            string[] names = new string[]
+            string[] names = new string[] 
             {
                 "James",
                 "John",
@@ -55,12 +56,35 @@ namespace MyFirstProject
                 "Jackie"
             };
 
-            Person john = new Person("John", "Metzbower");
+            var namesList = new List<string>();
+            namesList.AddRange(names);
 
-            Console.WriteLine(john.SayHello(names));
-            Console.WriteLine(john.SayHello("James", "John", "Jennifer", "Jackie", "Jeremy", "Josh"));
+            /*var newList = namesList.FindAll((s) => s[1] == 'a');
 
+            foreach (var name in newList)
+            {
+                Console.WriteLine(name);
+            }
 
+            namesList.Remove("Jackie");
+
+            var newList = namesList;
+
+            foreach (var name in newList)
+            {
+                Console.WriteLine(name);
+            }*/
+
+            var dictionary = new Dictionary<string, string>();
+            dictionary.Add("a", "Jeremy");
+            dictionary.Add("bill", "Jeffrey");
+
+            foreach (var kvp in dictionary)
+            {
+                Console.WriteLine(kvp.Key + " = " + kvp.Value);
+            }
+
+            string value = dictionary["a"];
         }
     }
 }
