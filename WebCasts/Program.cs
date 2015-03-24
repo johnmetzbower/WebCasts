@@ -12,13 +12,11 @@ namespace MyFirstProject
 
         static void Main(string[] args)
         {
-            /*object foo = (object)10;
-            int bar = (int)foo;*/
+            ISalariable emp = new Employee("John", "Doe", "Sales Clerk", 2000);
 
-            Employee john = new Employee("John", "Metzbower", "Owner");
-            Person customer = new Person("Jeremy", "Piven");
+            decimal salary = emp.Salary;
+            emp.PaySalary();
 
-            Console.WriteLine(john.SayHello(customer));
         }
     }
 }

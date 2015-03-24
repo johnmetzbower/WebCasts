@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace MyFirstProject.MyFirstDataTypes
 {
-    public class Employee : Person 
+    public class Employee : Person, ISalariable, IFirable
     {
 
-        public Employee(string firstName, string lastName, string position) 
+        public Employee(string firstName, string lastName, string position, decimal salary)
             : base(firstName, lastName)
         {
             if (string.IsNullOrEmpty(lastName))
@@ -20,8 +20,14 @@ namespace MyFirstProject.MyFirstDataTypes
             {
                 throw new ArgumentException("position cannot be null, empty or whitespace");
             }
+
+            if (_Salary < 1)
+            {
+                throw new ArgumentException("salary cannot be less than one");
+            }
+
             Position = position;
-            
+
         }
 
         public string Position { get; protected set; }
@@ -33,7 +39,19 @@ namespace MyFirstProject.MyFirstDataTypes
 
         public override string SayHello(string name)
         {
-           return "Hi. How may I help you, " + name + "?";
+            return "Hi. How may I help you, " + name + "?";
+        }
+
+
+        private decimal _Salary;
+        public decimal Salary
+        {
+            get { return _Salary; }
+        }
+
+        public void PaySalary()
+        {
+            // something important
         }
     }
 }
