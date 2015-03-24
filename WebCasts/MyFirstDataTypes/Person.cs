@@ -8,11 +8,11 @@ namespace MyFirstProject.MyFirstDataTypes
 {
     public class Person
     {
-        public string FirstName { get; private set;}
-        public string LastName { get; private set;}
+        public string FirstName { get; protected set;}
+        public string LastName { get; protected set;}
 
 
-        public Person(string firstName, string lastName = " ")//makes last name optional
+        public Person(string firstName, string lastName)//makes last name optional
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrWhiteSpace(firstName))
             {
@@ -27,7 +27,7 @@ namespace MyFirstProject.MyFirstDataTypes
             LastName = lastName;
          
         }
-        public string SayHello(string name)
+        public virtual string SayHello(string name)
         {
             //null
             //empty
@@ -72,5 +72,13 @@ namespace MyFirstProject.MyFirstDataTypes
             return SayHello(string.Join(", ", names));
 
         }
+
+        public override string ToString()
+        {
+            return FirstName + " " + LastName;
+        }
+
+  
+
     }
 }
