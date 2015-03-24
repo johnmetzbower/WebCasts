@@ -5,20 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using MyFirstProject.MyFirstDataTypes;
 
-namespace MyFirstProject
+namespace MyFirstProject.MyFirstDataTypes
 {
     class Program
     {
 
         static void Main(string[] args)
         {
-            /*object foo = (object)10;
-            int bar = (int)foo;*/
+            Shape shape = new Square(12);
+            Square square = new Square(10);
 
-            Employee john = new Employee("John", "Metzbower", "Owner");
-            Person customer = new Person("Jeremy", "Piven");
-
-            Console.WriteLine(john.SayHello(customer));
+            Console.WriteLine(shape.Area);
         }
     }
 }
