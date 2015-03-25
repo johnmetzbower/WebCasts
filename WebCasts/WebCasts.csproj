@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyFirstDataTypes\Employee.cs" />
+    <Compile Include="MyFirstDataTypes\EmployeePosition.cs" />
     <Compile Include="MyFirstDataTypes\IFirable.cs" />
     <Compile Include="MyFirstDataTypes\ISalariable.cs" />
     <Compile Include="MyFirstDataTypes\Person.cs" />

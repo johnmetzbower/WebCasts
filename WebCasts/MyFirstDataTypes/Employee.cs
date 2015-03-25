@@ -9,16 +9,12 @@ namespace MyFirstProject.MyFirstDataTypes
     public class Employee : Person, ISalariable, IFirable
     {
 
-        public Employee(string firstName, string lastName, string position, decimal salary)
+        public Employee(string firstName, string lastName, EmployeePosition position, decimal salary)
             : base(firstName, lastName)
         {
             if (string.IsNullOrEmpty(lastName))
             {
                 throw new ArgumentException("lastName cannot be null, empty, or whitespace");
-            }
-            if (string.IsNullOrEmpty(position) || string.IsNullOrWhiteSpace(position))
-            {
-                throw new ArgumentException("position cannot be null, empty or whitespace");
             }
 
             if (_Salary < 1)
@@ -30,7 +26,7 @@ namespace MyFirstProject.MyFirstDataTypes
 
         }
 
-        public string Position { get; protected set; }
+        public EmployeePosition Position { get; protected set; }
 
         public override string ToString()
         {

@@ -12,9 +12,8 @@ namespace MyFirstProject
 
         static void Main(string[] args)
         {
-            string name = "Jeremy";
 
-            string.IsNullOrEmpty(name);
+            Employee emp = new Employee("John", "Metzbower", EmployeePosition.Manager, 200000);
 
         }
     }
