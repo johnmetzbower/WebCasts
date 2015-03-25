@@ -12,10 +12,9 @@ namespace MyFirstProject
 
         static void Main(string[] args)
         {
-            ISalariable emp = new Employee("John", "Doe", "Sales Clerk", 2000);
+            string name = "Jeremy";
 
-            decimal salary = emp.Salary;
-            emp.PaySalary();
+            string.IsNullOrEmpty(name);
 
         }
     }
