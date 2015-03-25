@@ -17,6 +17,8 @@ namespace MyFirstProject.MyFirstDataTypes
 
             Console.WriteLine(ShapeUtility.IsPolygon(square));
             Console.WriteLine(ShapeUtility.IsPolygon(circle));
+
+            Console.ReadLine();
         }
     }
 }
