@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyFirstDataTypes\Circle.cs" />
     <Compile Include="MyFirstDataTypes\Shape.cs" />
+    <Compile Include="MyFirstDataTypes\ShapeUtility.cs" />
     <Compile Include="MyFirstDataTypes\Square.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

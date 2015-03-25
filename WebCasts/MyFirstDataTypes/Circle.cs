@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace MyFirstProject.MyFirstDataTypes
 {
-    class Square : Shape
+    class Circle : Shape
     {
-        
-        public double Length { get; private set; }
-        public Square(double sideLength)
-        {
-            Length = sideLength;
-            _Sides = 4;
-        }
+        public double Radius { get; private set; }
 
+        public Circle(double radius)
+        {
+            Radius = radius;
+            _Sides = 0;
+        }
 
         public override double Area
         {
-            get { return Length * Length; }
+            get { return Math.PI * Radius * Radius; }
         }
     }
 }

@@ -12,10 +12,11 @@ namespace MyFirstProject.MyFirstDataTypes
 
         static void Main(string[] args)
         {
-            Shape shape = new Square(12);
             Square square = new Square(10);
+            Circle circle = new Circle(10);
 
-            Console.WriteLine(shape.Area);
+            Console.WriteLine(ShapeUtility.IsPolygon(square));
+            Console.WriteLine(ShapeUtility.IsPolygon(circle));
         }
     }
 }

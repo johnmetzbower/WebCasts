@@ -12,5 +12,13 @@ namespace MyFirstProject.MyFirstDataTypes
         {
             get;
         }
+        public virtual int Sides
+        {
+            get { return _Sides; }
+        }
+
+        protected int _Sides;
+
+      
     }
 }
