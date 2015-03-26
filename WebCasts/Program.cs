@@ -13,13 +13,10 @@ namespace MyFirstProject.MyFirstDataTypes
         static void Main(string[] args)
         {
 
-            Square square = new Square(10);
-            Circle circle = new Circle(10);
+            Square square = new Square(10, Color.Black);
+            Circle circle = new Circle(10, Color.White);
 
-            Console.WriteLine(square.IsPolygon());
-            Console.WriteLine(circle.IsPolygon());
-
-            Console.ReadLine();
+            Console.WriteLine("Area of the Square is");
         }
     }
 }

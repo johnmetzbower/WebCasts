@@ -10,7 +10,7 @@ namespace MyFirstProject.MyFirstDataTypes
     {
         public abstract double Area
         {
-            get;
+            get; 
         }
         public virtual int Sides
         {
@@ -18,6 +18,13 @@ namespace MyFirstProject.MyFirstDataTypes
         }
 
         protected int _Sides;
+
+        public virtual Color Color
+        {
+            get { return _Color; }
+        }
+
+        protected Color _Color;
 
       
     }

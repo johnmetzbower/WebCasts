@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyFirstDataTypes\Circle.cs" />
+    <Compile Include="MyFirstDataTypes\Color.cs" />
     <Compile Include="MyFirstDataTypes\Shape.cs" />
     <Compile Include="MyFirstDataTypes\ShapeUtility.cs" />
     <Compile Include="MyFirstDataTypes\Square.cs" />
