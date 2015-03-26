@@ -16,7 +16,8 @@ namespace MyFirstProject.MyFirstDataTypes
             Square square = new Square(10, Color.Black);
             Circle circle = new Circle(10, Color.White);
 
-            Console.WriteLine("Area of the Square is");
+            Console.WriteLine("Area of the Square is...");
+            Console.WriteLine(square.Area);  //why is it not compiling?
         }
     }
 }
