@@ -5,20 +5,81 @@ using System.Text;
 using System.Threading.Tasks;
 using MyFirstProject.MyFirstDataTypes;
 
-namespace MyFirstProject
+namespace MyFirstProject.MyFirstDataTypes
 {
+    /*public delegate void SayMessage(string message);
+
+    class DelegateOne
+    {
+        public void Method(string message)
+        {
+            Console.WriteLine(message);
+        }
+    }
+
+    class DelegateTwo
+    {
+        public void MethodTwo(SayMessage fn)
+        {
+            fn("Hello, World from DelegateTwo!");
+        }
+    }
     class Program
     {
 
         static void Main(string[] args)
         {
-            /*object foo = (object)10;
-            int bar = (int)foo;*/
+            DelegateOne one = new DelegateOne();
+            DelegateTwo two = new DelegateTwo();
 
-            Employee john = new Employee("John", "Metzbower", "Owner");
-            Person customer = new Person("Jeremy", "Piven");
+            two.MethodTwo(one.Method);
 
-            Console.WriteLine(john.SayHello(customer));
+        }
+    }*/
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+
+            List<string> names = new List<string>
+            {
+                "Jeremy",
+                "Jeffrey",
+                "John",
+                "Jennifer",
+                "Jackie",
+                "Julianne",
+            };
+
+            Func<string, bool> fn = FindNamesWithE;
+            Predicate<string> pred = name => name.IndexOf("e") == 1;
+
+            Func<int, string, bool> fn2 = (i, s) =>
+            {
+                return true;
+            };
+            
+
+            bool result = fn("ae");
+
+            Console.WriteLine(result);
+
+            var namesWithE = names.FindAll(
+                delegate(string name)
+                {
+                    return name.IndexOf("e") == 1;
+                }
+            );
+
+            foreach (var name in namesWithE)
+            {
+                Console.WriteLine(name);
+            }
+        }
+        public static bool FindNamesWithE(string name)
+        {
+            return name.IndexOf("e") == 1;
         }
     }
 }
